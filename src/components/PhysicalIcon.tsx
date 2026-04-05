@@ -86,10 +86,10 @@ export function PhysicalIcon({ href, icon, className, delay = 0 }: PhysicalIconP
           style={{ opacity: hoverSpring, transform: "translateZ(-40px)" }}
         />
 
-        {/* Floating Icon Surface */}
+        {/* Embedded Material Icon Surface */}
         <div 
-          className="relative text-white/70 group-hover:text-white transition-colors duration-300 drop-shadow-[0_0_8px_rgba(59,130,246,0.8)]"
-          style={{ transform: "translateZ(25px)" }}
+          className="relative text-white/30 group-hover:text-[#60a5fa] transition-colors duration-300 drop-shadow-[0_-1px_1px_rgba(0,0,0,0.9)] drop-shadow-[0_1px_1px_rgba(255,255,255,0.2)] group-hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.9)]"
+          style={{ transform: "translateZ(4px)" }}
         >
           {icon}
         </div>
