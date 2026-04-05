@@ -24,21 +24,30 @@ export default function Home() {
       */}
       <main 
         className="flex-grow flex flex-col relative"
-        style={{ perspective: "1200px", transformStyle: "preserve-3d", overflowX: "hidden" }}
+        style={{ perspective: "1200px", transformStyle: "preserve-3d" }}
       >
-        <Hero />
-        <ProofStrip />
-        <About />
-        <Skills />
-        <Projects />
-        <Education />
-        <AIEdge />
-        <Certificates />
-        <Contact />
-        
-        <footer className="py-8 text-center text-xs text-text-secondary font-mono border-t border-white/5 relative z-0">
-          <p>&copy; {new Date().getFullYear()} Divy Shukla. All Systems Go.</p>
-        </footer>
+        {/* GLOBAL BACKGROUND LAYER (DEEP SPACE) */}
+        <div 
+          className="pointer-events-none fixed inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.05),transparent_80%)] mix-blend-screen"
+          style={{ transform: "translateZ(-200px)", transformStyle: "preserve-3d" }}
+        />
+
+        {/* Sections sit at Z: 0px natively */}
+        <div className="relative z-10 w-full" style={{ transformStyle: "preserve-3d" }}>
+          <Hero />
+          <ProofStrip />
+          <About />
+          <Skills />
+          <Projects />
+          <Education />
+          <AIEdge />
+          <Certificates />
+          <Contact />
+          
+          <footer className="py-8 text-center text-xs text-text-secondary font-mono border-t border-white/5 relative z-0">
+            <p>&copy; {new Date().getFullYear()} Divy Shukla. All Systems Go.</p>
+          </footer>
+        </div>
       </main>
     </div>
   );
