@@ -25,8 +25,8 @@ export function TiltCard({
   const y = useMotionValue(0.5);
   const isHovered = useMotionValue(0);
 
-  // Slow in, smooth out physics (premium feel)
-  const springConfig = { stiffness: 150, damping: 20, mass: 0.5 };
+  // Premium spring physics mapping to 0.4-0.6s easeOut
+  const springConfig = { bounce: 0.1, duration: 500 };
   const smoothX = useSpring(x, springConfig);
   const smoothY = useSpring(y, springConfig);
   const smoothHover = useSpring(isHovered, springConfig);
@@ -75,13 +75,22 @@ export function TiltCard({
         transformStyle: "preserve-3d",
       }}
     >
-      {/* Front Ambient/Reflection Glow */}
+      {/* STATIC AMBIENT LIGHTING SYSTEM (Top White + Right Blue) */}
+      <div 
+        className="pointer-events-none absolute inset-0 rounded-[inherit] mix-blend-overlay z-20"
+        style={{ 
+          background: 'radial-gradient(ellipse at top, rgba(255,255,255,0.08) 0%, transparent 60%), radial-gradient(ellipse at right, rgba(59,130,246,0.1) 0%, transparent 70%)',
+          transform: "translateZ(1px)" 
+        }} 
+      />
+
+      {/* DYNAMIC Front Ambient/Reflection Glow */}
       <motion.div
         className="pointer-events-none absolute inset-0 z-30 rounded-[inherit] mix-blend-overlay transition-opacity duration-500"
         style={{
           opacity: shadowOpacity,
           background: `radial-gradient(400px circle at calc(${glowX} * 1) calc(${glowY} * 1), rgba(255,255,255,0.15), transparent 50%)`,
-          transform: "translateZ(1px)"
+          transform: "translateZ(2px)"
         }}
       />
       

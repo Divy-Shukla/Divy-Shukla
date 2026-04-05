@@ -2,6 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { Briefcase, Code, Camera, MessageCircle } from "lucide-react";
+import { PhysicalIcon } from "@/components/PhysicalIcon";
 
 export function Navbar() {
   return (
@@ -17,11 +18,11 @@ export function Navbar() {
         <Link href="#contact" className="hover:text-white transition-colors">Contact</Link>
       </div>
       <div className="flex items-center gap-6">
-        <div className="hidden lg:flex gap-4 text-text-secondary">
-          <Link href="https://linkedin.com/in/" target="_blank"><Briefcase size={18} className="hover:text-white hover-glow" /></Link>
-          <Link href="https://github.com/" target="_blank"><Code size={18} className="hover:text-white hover-glow" /></Link>
-          <Link href="https://instagram.com/" target="_blank"><Camera size={18} className="hover:text-white hover-glow" /></Link>
-          <Link href="https://x.com/" target="_blank"><MessageCircle size={18} className="hover:text-white hover-glow" /></Link>
+        <div className="hidden lg:flex gap-4 text-text-secondary" style={{ perspective: "1000px", transformStyle: "preserve-3d" }}>
+          <PhysicalIcon href="https://linkedin.com/in/" icon={<Briefcase size={16} />} delay={0.1} />
+          <PhysicalIcon href="https://github.com/" icon={<Code size={16} />} delay={0.2} />
+          <PhysicalIcon href="https://instagram.com/" icon={<Camera size={16} />} delay={0.3} />
+          <PhysicalIcon href="https://x.com/" icon={<MessageCircle size={16} />} delay={0.4} />
         </div>
         <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="text-xs font-mono border border-white/20 px-4 py-1.5 rounded hover:border-accent hover:text-accent transition-all group">
           <span className="group-hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.5)]">Resume</span>

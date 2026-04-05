@@ -1,4 +1,5 @@
 import { Mail, Briefcase, Code, MessageCircle } from "lucide-react";
+import { PhysicalIcon } from "@/components/PhysicalIcon";
 
 export function Contact() {
   return (
@@ -23,10 +24,10 @@ export function Contact() {
           Initialize Contact
         </a>
 
-        <div className="flex items-center gap-8 mt-16 text-text-secondary">
-          <a href="https://linkedin.com/in/" className="hover:text-white transition-colors" aria-label="LinkedIn"><Briefcase /></a>
-          <a href="https://github.com/" className="hover:text-white transition-colors" aria-label="GitHub"><Code /></a>
-          <a href="https://x.com/" className="hover:text-white transition-colors" aria-label="Twitter"><MessageCircle /></a>
+        <div className="flex items-center gap-8 mt-16 text-text-secondary" style={{ perspective: "1000px", transformStyle: "preserve-3d" }}>
+          <PhysicalIcon href="https://linkedin.com/in/" icon={<Briefcase size={18} />} delay={0.1} />
+          <PhysicalIcon href="https://github.com/" icon={<Code size={18} />} delay={0.2} />
+          <PhysicalIcon href="https://x.com/" icon={<MessageCircle size={18} />} delay={0.3} />
         </div>
       </div>
     </section>
