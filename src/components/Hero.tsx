@@ -10,8 +10,8 @@ export function Hero() {
   const smoothX = useSpring(x, springConfig);
   const smoothY = useSpring(y, springConfig);
 
-  const textRotateX = useTransform(smoothY, [0, 1], [3, -3]);
-  const textRotateY = useTransform(smoothX, [0, 1], [-3, 3]);
+  const textRotateX = useTransform(smoothY, [0, 1], [1, -1]);
+  const textRotateY = useTransform(smoothX, [0, 1], [-1, 1]);
 
   return (
     <section 
@@ -29,33 +29,39 @@ export function Hero() {
       }}
     >
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-accent/5 via-background to-background" style={{ transform: "translateZ(-200px)" }} />
+      
+      {/* Eye Flow Guiding Lightline */}
+      <div 
+        className="pointer-events-none absolute right-[20%] top-[45%] w-[40vw] h-[1px] bg-gradient-to-r from-transparent via-white/10 to-accent/10 -rotate-6 blur-[1px]" 
+        style={{ transform: "translateZ(-50px)" }}
+      />
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-full max-w-7xl mx-auto items-center z-10" style={{ transformStyle: "preserve-3d" }}>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full max-w-7xl mx-auto items-center z-10" style={{ transformStyle: "preserve-3d" }}>
         
         {/* TEXT COLUMN - Stable Authority */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex flex-col gap-6"
-          style={{ rotateX: textRotateX, rotateY: textRotateY, transformStyle: "preserve-3d" }}
+          className="flex flex-col gap-6 lg:pr-12"
+          style={{ rotateX: textRotateX, rotateY: textRotateY, z: 20, transformStyle: "preserve-3d" }}
         >
           <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold leading-[1.05] tracking-tight font-sans text-white drop-shadow-xl" style={{ transform: "translateZ(10px)" }}>
             I&apos;m Divy.<br />
-            <span className="text-[#a1a1aa] font-medium text-4xl md:text-5xl lg:text-6xl tracking-tight">I build, deploy, and scale intelligent systems.</span>
+            <span className="text-[#a1a1aa] font-medium text-4xl md:text-5xl lg:text-6xl tracking-tight leading-tight">I build, deploy, and scale intelligent systems.</span>
           </h1>
           <p className="text-xl text-accent font-mono tracking-widest mt-2" style={{ transform: "translateZ(5px)" }}>// AI SYSTEMS BUILDER</p>
           
           <div className="flex gap-4 mt-8" style={{ transformStyle: "preserve-3d", transform: "translateZ(15px)" }}>
-            {/* Primary CTA - 3D Hover & Glow */}
+            {/* Primary CTA - 3D Hover & Low Pulse */}
             <a 
               href="#projects" 
-              className="relative group bg-white text-black px-8 py-4 rounded text-sm font-bold tracking-wider hover:bg-neutral-200 transition-all duration-500 shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)]"
+              className="relative group bg-white text-black px-8 py-4 rounded text-sm font-bold tracking-wider hover:bg-neutral-200 transition-all duration-500 shadow-[0_0_15px_rgba(255,255,255,0.05)] hover:shadow-[0_0_40px_rgba(255,255,255,0.6)]"
               style={{ transform: "translateZ(0px)" }}
-              onMouseEnter={(e) => (e.currentTarget.style.transform = "translateZ(40px)")}
+              onMouseEnter={(e) => (e.currentTarget.style.transform = "translateZ(50px)")}
               onMouseLeave={(e) => (e.currentTarget.style.transform = "translateZ(0px)")}
             >
-              <span className="absolute inset-0 rounded-[inherit] bg-white opacity-20 animate-pulse" />
+              <span className="absolute inset-0 rounded-[inherit] bg-white opacity-20 animate-[pulse_4s_ease-in-out_infinite]" />
               <span className="relative z-10">Explore Work</span>
             </a>
             
@@ -73,16 +79,19 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative aspect-[3/4] lg:aspect-square mx-auto w-full max-w-sm lg:max-w-lg"
+          className="relative aspect-[3/4] lg:aspect-square w-full max-w-sm lg:max-w-md lg:-translate-x-12 mx-auto"
           style={{ transformStyle: "preserve-3d" }}
         >
-          {/* Spotlight behind face */}
-          <div className="absolute inset-0 bg-accent/30 blur-[100px] rounded-full opacity-80" style={{ transform: "translateZ(-80px)" }} />
+          {/* True Directional Spotlight behind face */}
+          <div 
+            className="absolute -inset-10 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.25)_0%,transparent_60%)] blur-[50px] opacity-90 rounded-full" 
+            style={{ transform: "translateZ(-40px)" }} 
+          />
           
           <TiltCard 
-            tiltAmount={12} 
+            tiltAmount={8} 
             glowOpacity={0.8} 
-            baseZ={60}
+            baseZ={80}
             hoverZ={100}
             className="h-full w-full p-0 flex items-center justify-center rounded-2xl overflow-hidden shadow-2xl backdrop-blur-sm"
           >
@@ -92,7 +101,7 @@ export function Hero() {
                 alt="Divy"
                 width={600}
                 height={600}
-                className="object-cover w-full h-full scale-[1.02]"
+                className="object-cover w-full h-full scale-[1.15]"
               />
               
               {/* Soft Rim Light overlay */}

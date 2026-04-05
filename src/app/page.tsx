@@ -28,7 +28,7 @@ export default function Home() {
       >
         {/* GLOBAL BACKGROUND LAYER (DEEP ATMOSPHERE) */}
         <div 
-          className="pointer-events-none fixed inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.05),transparent_80%)] mix-blend-screen opacity-85"
+          className="pointer-events-none fixed inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.05),transparent_80%)] mix-blend-screen opacity-75"
           style={{ transform: "translateZ(-200px) scale(0.92)", transformStyle: "preserve-3d" }}
         />
 
