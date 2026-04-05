@@ -36,6 +36,7 @@ export function TiltCard({
   
   // Parallax Z movement
   const zPosition = useTransform(smoothHover, [0, 1], [baseZ, hoverZ]);
+  const scaleEffect = useTransform(smoothHover, [0, 1], [1, 1.02]);
   
   // Responsive shadow extending when tilting and moving towards user
   const shadowOpacity = useTransform(smoothHover, [0, 1], [0, glowOpacity]);
@@ -72,14 +73,15 @@ export function TiltCard({
         rotateX,
         rotateY,
         z: zPosition,
+        scale: scaleEffect,
         transformStyle: "preserve-3d",
       }}
     >
-      {/* STATIC AMBIENT LIGHTING SYSTEM (Top White + Right Blue) */}
+      {/* STATIC AMBIENT LIGHTING SYSTEM (Top White Edge + Right Blue Volume) */}
       <div 
-        className="pointer-events-none absolute inset-0 rounded-[inherit] mix-blend-overlay z-20"
+        className="pointer-events-none absolute inset-0 rounded-[inherit] mix-blend-overlay z-20 shadow-[inset_0_1px_1px_rgba(255,255,255,0.15),inset_-15px_0_30px_-10px_rgba(59,130,246,0.12)]"
         style={{ 
-          background: 'radial-gradient(ellipse at top, rgba(255,255,255,0.08) 0%, transparent 60%), radial-gradient(ellipse at right, rgba(59,130,246,0.1) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse at top, rgba(255,255,255,0.05) 0%, transparent 60%)',
           transform: "translateZ(1px)" 
         }} 
       />
@@ -94,12 +96,6 @@ export function TiltCard({
         }}
       />
       
-      {/* Dynamic Edge Lighting (Accent) */}
-      <motion.div
-        className="pointer-events-none absolute -inset-[1px] -z-10 rounded-[inherit] bg-gradient-to-br from-accent/0 via-accent/20 to-accent/0 transition-opacity duration-700"
-        style={{ opacity: shadowOpacity, transform: "translateZ(-1px)" }}
-      />
-      
       {/* Main Structural Content Box */}
       <div 
         className="relative w-full h-full z-20 rounded-[inherit]" 
@@ -108,12 +104,13 @@ export function TiltCard({
         {children}
       </div>
 
-      {/* Floating Space Shadow (Drop Shadow) detached in Z layout */}
+      {/* Floating Space Shadow (Directional Offset) detached in Z layout */}
       <motion.div
-        className="pointer-events-none absolute inset-0 -z-20 rounded-[inherit] bg-accent/10 blur-[40px] transition-opacity duration-500"
+        className="pointer-events-none absolute -inset-2 -z-20 rounded-[inherit] bg-black blur-[25px] transition-all duration-500 opacity-60"
         style={{
-          opacity: shadowOpacity,
-          transform: "translateZ(-20px)"
+          opacity: useTransform(smoothHover, [0, 1], [0.3, glowOpacity * 1.5]), // Deep shadow based on number prop
+          y: useTransform(smoothHover, [0, 1], [5, 15]), // Drops down simulating top light
+          z: useTransform(smoothHover, [0, 1], [-10, -40]) // physically distant
         }}
       />
     </motion.div>

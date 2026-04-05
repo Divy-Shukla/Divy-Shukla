@@ -26,10 +26,10 @@ export default function Home() {
         className="flex-grow flex flex-col relative"
         style={{ perspective: "1200px", transformStyle: "preserve-3d" }}
       >
-        {/* GLOBAL BACKGROUND LAYER (DEEP SPACE) */}
+        {/* GLOBAL BACKGROUND LAYER (DEEP ATMOSPHERE) */}
         <div 
-          className="pointer-events-none fixed inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.05),transparent_80%)] mix-blend-screen"
-          style={{ transform: "translateZ(-200px)", transformStyle: "preserve-3d" }}
+          className="pointer-events-none fixed inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.05),transparent_80%)] mix-blend-screen opacity-85"
+          style={{ transform: "translateZ(-200px) scale(0.92)", transformStyle: "preserve-3d" }}
         />
 
         {/* Sections sit at Z: 0px natively */}
