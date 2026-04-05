@@ -1,0 +1,231 @@
+
+> temp-app@0.1.0 build
+> next build
+
+▲ Next.js 16.2.2 (Turbopack)
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 11 errors:
+./src/components/Contact.tsx:1:1
+Export Github doesn't exist in target module
+[31m[1m>[0m [90m1 |[0m [36mimport[0m { [33mMail[0m, [33mLinkedin[0m, [33mGithub[0m, [33mTwitter[0m } [36mfrom[0m [32m"lucide-react"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m2 |[0m
+  [90m3 |[0m [36mexport[0m [36mfunction[0m [33mContact[0m() {
+  [90m4 |[0m   [36mreturn[0m (
+
+The export Github was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-rsc] (ecmascript).
+Did you mean to import Gift?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./src/components/Contact.tsx
+    ./src/app/page.tsx
+
+
+./src/components/Navbar.tsx:4:1
+Export Github doesn't exist in target module
+  [90m2 |[0m [36mimport[0m [33mReact[0m [36mfrom[0m [32m"react"[0m;
+  [90m3 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mLinkedin[0m, [33mGithub[0m, [33mInstagram[0m, [33mTwitter[0m } [36mfrom[0m [32m"lucide-react"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m
+  [90m6 |[0m [36mexport[0m [36mfunction[0m [33mNavbar[0m() {
+  [90m7 |[0m   [36mreturn[0m (
+
+The export Github was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import Gift?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/page.tsx
+
+
+./src/components/Navbar.tsx:4:1
+Export Github doesn't exist in target module
+  [90m2 |[0m [36mimport[0m [33mReact[0m [36mfrom[0m [32m"react"[0m;
+  [90m3 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mLinkedin[0m, [33mGithub[0m, [33mInstagram[0m, [33mTwitter[0m } [36mfrom[0m [32m"lucide-react"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m
+  [90m6 |[0m [36mexport[0m [36mfunction[0m [33mNavbar[0m() {
+  [90m7 |[0m   [36mreturn[0m (
+
+The export Github was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import Gift?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/page.tsx
+
+
+./src/components/Navbar.tsx:4:1
+Export Instagram doesn't exist in target module
+  [90m2 |[0m [36mimport[0m [33mReact[0m [36mfrom[0m [32m"react"[0m;
+  [90m3 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mLinkedin[0m, [33mGithub[0m, [33mInstagram[0m, [33mTwitter[0m } [36mfrom[0m [32m"lucide-react"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m
+  [90m6 |[0m [36mexport[0m [36mfunction[0m [33mNavbar[0m() {
+  [90m7 |[0m   [36mreturn[0m (
+
+The export Instagram was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import Star?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/page.tsx
+
+
+./src/components/Navbar.tsx:4:1
+Export Instagram doesn't exist in target module
+  [90m2 |[0m [36mimport[0m [33mReact[0m [36mfrom[0m [32m"react"[0m;
+  [90m3 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mLinkedin[0m, [33mGithub[0m, [33mInstagram[0m, [33mTwitter[0m } [36mfrom[0m [32m"lucide-react"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m
+  [90m6 |[0m [36mexport[0m [36mfunction[0m [33mNavbar[0m() {
+  [90m7 |[0m   [36mreturn[0m (
+
+The export Instagram was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import Star?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/page.tsx
+
+
+./src/components/Contact.tsx:1:1
+Export Linkedin doesn't exist in target module
+[31m[1m>[0m [90m1 |[0m [36mimport[0m { [33mMail[0m, [33mLinkedin[0m, [33mGithub[0m, [33mTwitter[0m } [36mfrom[0m [32m"lucide-react"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m2 |[0m
+  [90m3 |[0m [36mexport[0m [36mfunction[0m [33mContact[0m() {
+  [90m4 |[0m   [36mreturn[0m (
+
+The export Linkedin was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-rsc] (ecmascript).
+Did you mean to import Link?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./src/components/Contact.tsx
+    ./src/app/page.tsx
+
+
+./src/components/Navbar.tsx:4:1
+Export Linkedin doesn't exist in target module
+  [90m2 |[0m [36mimport[0m [33mReact[0m [36mfrom[0m [32m"react"[0m;
+  [90m3 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mLinkedin[0m, [33mGithub[0m, [33mInstagram[0m, [33mTwitter[0m } [36mfrom[0m [32m"lucide-react"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m
+  [90m6 |[0m [36mexport[0m [36mfunction[0m [33mNavbar[0m() {
+  [90m7 |[0m   [36mreturn[0m (
+
+The export Linkedin was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import Link?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/page.tsx
+
+
+./src/components/Navbar.tsx:4:1
+Export Linkedin doesn't exist in target module
+  [90m2 |[0m [36mimport[0m [33mReact[0m [36mfrom[0m [32m"react"[0m;
+  [90m3 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mLinkedin[0m, [33mGithub[0m, [33mInstagram[0m, [33mTwitter[0m } [36mfrom[0m [32m"lucide-react"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m
+  [90m6 |[0m [36mexport[0m [36mfunction[0m [33mNavbar[0m() {
+  [90m7 |[0m   [36mreturn[0m (
+
+The export Linkedin was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import Link?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/page.tsx
+
+
+./src/components/Contact.tsx:1:1
+Export Twitter doesn't exist in target module
+[31m[1m>[0m [90m1 |[0m [36mimport[0m { [33mMail[0m, [33mLinkedin[0m, [33mGithub[0m, [33mTwitter[0m } [36mfrom[0m [32m"lucide-react"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m2 |[0m
+  [90m3 |[0m [36mexport[0m [36mfunction[0m [33mContact[0m() {
+  [90m4 |[0m   [36mreturn[0m (
+
+The export Twitter was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-rsc] (ecmascript).
+Did you mean to import Timer?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./src/components/Contact.tsx
+    ./src/app/page.tsx
+
+
+./src/components/Navbar.tsx:4:1
+Export Twitter doesn't exist in target module
+  [90m2 |[0m [36mimport[0m [33mReact[0m [36mfrom[0m [32m"react"[0m;
+  [90m3 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mLinkedin[0m, [33mGithub[0m, [33mInstagram[0m, [33mTwitter[0m } [36mfrom[0m [32m"lucide-react"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m
+  [90m6 |[0m [36mexport[0m [36mfunction[0m [33mNavbar[0m() {
+  [90m7 |[0m   [36mreturn[0m (
+
+The export Twitter was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import Timer?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/page.tsx
+
+
+./src/components/Navbar.tsx:4:1
+Export Twitter doesn't exist in target module
+  [90m2 |[0m [36mimport[0m [33mReact[0m [36mfrom[0m [32m"react"[0m;
+  [90m3 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mLinkedin[0m, [33mGithub[0m, [33mInstagram[0m, [33mTwitter[0m } [36mfrom[0m [32m"lucide-react"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m
+  [90m6 |[0m [36mexport[0m [36mfunction[0m [33mNavbar[0m() {
+  [90m7 |[0m   [36mreturn[0m (
+
+The export Twitter was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import Timer?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/page.tsx
+
+
+    at <unknown> (./src/components/Contact.tsx:1:1)
+    at <unknown> (./src/components/Navbar.tsx:4:1)
+    ... collapsed 3 duplicate lines matching above 1 lines 3 times...
+    at <unknown> (./src/components/Contact.tsx:1:1)
+    at <unknown> (./src/components/Navbar.tsx:4:1)
+    at <unknown> (./src/components/Navbar.tsx:4:1)
+    ... collapsed 3 duplicate lines matching above lines ...
